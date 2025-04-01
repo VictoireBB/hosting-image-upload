@@ -33,7 +33,7 @@ class ArticlesController < ApplicationController
   # PATCH/PUT /articles/1
   def update
     if @article.update(article_params)
-      redirect_to @article, notice: "Article was successfully updated.", status: :see_other
+      redirect_to root_path, notice: "Article was successfully updated.", status: :see_other
     else
       render :edit, status: :unprocessable_entity
     end
